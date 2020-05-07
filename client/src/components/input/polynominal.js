@@ -167,7 +167,7 @@ export default function Polynominial({page}) {
             <div className='inputOptions'>
                 <div className='buttons'>
                     <p className='infoText'>Click on the canvas to add points</p>
-                    <button onClick={(e) => clearPosition()}>Delete point</button>
+                    <button onClick={(e) => clearPosition()}>Clear Point</button>
                 </div>
                 <div className='optionContainer'>
                     <h3 className='optionHeader'>Learning Rate</h3>
@@ -184,18 +184,8 @@ export default function Polynominial({page}) {
                                 onClick={()=>selectOptimizer(optim)}>{optim}</p>
                         )}
                     </div>
-
-                    {/* <div className='activePositions'>
-                        {dot.map(elem=>
-                            <div className='aPosBlock'>
-                                <p>X: {elem.x} </p>
-                                <p>Y: {elem.y}</p>
-                            </div>
-                        )}    
-                    </div> */}
                 </div>
             </div>
-
             <canvas
                 ref={canvasRef}
                 className='canvas'
@@ -206,7 +196,6 @@ export default function Polynominial({page}) {
                 }}
                 onClick={(e) => addPosition(e,false)}
             />
-
         </div>
     )
 }

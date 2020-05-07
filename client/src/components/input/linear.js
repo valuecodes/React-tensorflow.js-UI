@@ -112,7 +112,6 @@ export default function Linear({page}) {
     }
 
     function changeLearningRate(e){
-        console.log(e.target.value/25)
         setLearningRate(e.target.value/100)
     }
 
@@ -120,7 +119,6 @@ export default function Linear({page}) {
         setDot([]);
         setX_values([]);
         setY_values([]);
-
         cancelAnimationFrame(animation);
         const canvas=canvasRef.current
         const ctx=canvas.getContext('2d')
@@ -133,8 +131,8 @@ export default function Linear({page}) {
             <h1>Linear Regression</h1>
             <div className='inputOptions'>
                 <div className='buttons'>
-                    {/* <button onClick={(e) => addPosition(e,true)}>Start</button> */}          <p className='infoText'>Click on the canvas to add points</p>
-                    <button onClick={(e) => clearPosition(e)}>Clear</button>
+                    <p className='infoText'>Click on the canvas to add points</p>
+                    <button onClick={(e) => clearPosition(e)}>Clear Point</button>
 
                 </div>
                 <div className='optionContainer'>

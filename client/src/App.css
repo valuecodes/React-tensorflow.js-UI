@@ -17,6 +17,7 @@ body{
   border-bottom: none;
   margin-top: 50px;
   height: 70px;
+  box-shadow: 0 0 1px 1px rgba(185, 185, 185, 0.548);
 }
 
 .navbarButton{
@@ -27,6 +28,7 @@ body{
   height: 65px;
   width: 1fr;
   margin-right: -2px;
+  box-shadow: 0 0 4px 0px rgba(185, 185, 185, 0.548);
 }
 .navbarButton:hover{
   cursor: pointer;

@@ -114,8 +114,6 @@ export default function ThirdDegree({page}) {
 
         let results=[];
 
-        let currentRounds=[];
-
         for(var i=0;i<4;i++){
             const config={
                 headers:{
@@ -131,12 +129,9 @@ export default function ThirdDegree({page}) {
             let lineData=res.data.data
             results.push(lineData);
             setTimeout((round)=>{
-                console.log(round)
                 createLine(res.data.data,rounds[round].color)
-                // setCurrentRounds([rounds[round]]);
                 setActiveRound(round)
             },rounds[i].timeOut,i)
-
             setCurrentRounds(rounds);
         }
         

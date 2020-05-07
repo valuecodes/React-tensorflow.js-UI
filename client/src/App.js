@@ -9,10 +9,8 @@ import { Spring } from 'react-spring/renderprops';
 function App() {
   
   const [page,setPage]=useState('linear');
-  const [pageTransform,setPageTransform]=useState('linear');
 
   function changePage(page){
-    setPageTransform(page);
     setPage(page)
   }
 
